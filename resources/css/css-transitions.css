@@ -1,0 +1,20 @@
+.wrapper {
+    padding: 1rem;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    background-color: oklch(0.69 0.18 245.62);
+    border-radius: 0.25rem;
+    transition-property: border-radius, background-color, transform, height;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.99, -0.78, 0, 1.73);
+
+    &:hover {
+        background-color: tomato;
+        border-radius: 2rem;
+        transform: rotate(45deg) scale(0.7);
+        height: 50px;
+    }
+}

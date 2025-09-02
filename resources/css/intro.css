@@ -1,0 +1,61 @@
+.wrapper {
+    padding: 2rem;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    background-color: oklch(0.69 0.18 245.62);
+    border-radius: 0.25rem;
+    transition-property: border-radius, background-color, transform, height;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.99, -0.78, 0, 1.73);
+}
+
+@keyframes party {
+    from {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: scale(0.5) rotate(90deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes pulse {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+
+.square:hover {
+    animation: pulse 1s linear infinite alternate;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .square:hover {
+        animation: party 0.75s ease-in-out infinite alternate;
+    }
+}

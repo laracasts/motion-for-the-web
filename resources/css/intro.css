@@ -33,12 +33,19 @@
     }
 }
 
-.square:hover {
-    animation: pulse 1s linear infinite alternate;
+@keyframes scale-down {
+    /* from {
+        transform: scale(1);
+    } */
+    to {
+        /* transform: scale(0.8); */
+        width: 80px;
+        height: 80px;
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
     .square:hover {
-        animation: party 0.75s ease-in-out infinite alternate;
+        animation: scale-down 0.5s ease-in-out infinite alternate;
     }
 }

@@ -14,7 +14,9 @@
 </head>
 
 <body>
- {{ $slot }}
+ <div class="wrapper">
+  {{ $slot }}
+ </div>
 </body>
 
 </html>

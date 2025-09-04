@@ -1,1 +1,5 @@
 @import "tailwindcss/preflight.css";
+
+.wrapper {
+    padding: 1rem;
+}

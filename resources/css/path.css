@@ -1,0 +1,62 @@
+:root {
+    --star: polygon(
+        50% 0%,
+        61% 35%,
+        100% 5%,
+        79% 84%,
+        71% 51%,
+        57% 85%,
+        21% 91%,
+        58% 46%,
+        2% 35%,
+        49% 23%
+    );
+}
+
+.container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin-bottom: 5rem;
+}
+
+.star {
+    position: absolute;
+    inset: 0;
+    background: hotpink;
+    clip-path: var(--star);
+}
+
+.marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 6px;
+    background: black;
+
+    offset-path: var(--star);
+    animation: follow-path 5s ease-in-out infinite alternate;
+}
+
+.rectangle {
+    height: 30px;
+    width: 50px;
+    background-color: hotpink;
+    border-radius: 0.25rem;
+    offset-path: url(#motion-path);
+
+    animation: follow-path 5s ease-in-out infinite alternate;
+}
+
+@keyframes follow-path {
+    45% {
+        offset-distance: 55%;
+    }
+    55% {
+        offset-distance: 45%;
+    }
+    to {
+        offset-distance: 100%;
+    }
+}

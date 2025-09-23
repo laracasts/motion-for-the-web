@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.shape {
+    height: 240px;
+    border-radius: 0.5rem;
+    animation: reveal;
+    animation-timeline: view();
+    animation-range-start: entry;
+    animation-range-end: entry 50%;
+    animation-fill-mode: both;
+}
+
+.shape--one {
+    width: 300px;
+    background: oklch(66.7% 0.295 322.15);
+}
+.shape--two {
+    width: 120px;
+    background: oklch(58.5% 0.233 277.117);
+}
+.shape--three {
+    width: 240px;
+    background: oklch(78.9% 0.154 211.53);
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }
+}

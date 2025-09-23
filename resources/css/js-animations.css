@@ -1,0 +1,9 @@
+body {
+    padding: 2rem;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: oklch(0.69 0.18 245.62);
+}

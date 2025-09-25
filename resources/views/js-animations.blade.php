@@ -7,4 +7,5 @@
   <button id="reverse">Reverse</button>
   <input id="slider" type="range" value="0" min="0" max="1" step="0.01">
  </div>
+ <p>The current progress of the animation is <span id="progress"></span></p>
 </x-layout>

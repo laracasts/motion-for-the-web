@@ -3,6 +3,7 @@ const playButton = document.querySelector("#play") as HTMLButtonElement;
 const pauseButton = document.querySelector("#pause") as HTMLButtonElement;
 const reverseButton = document.querySelector("#reverse") as HTMLButtonElement;
 const slider = document.querySelector("#slider") as HTMLInputElement;
+const progressText = document.querySelector("#progress") as HTMLSpanElement;
 
 const keyframes = [
     { transform: "translateX(0) translateY(0)", easing: "ease-in-out" },
@@ -52,3 +53,18 @@ slider.addEventListener("input", () => {
 
     animation.currentTime = slider.valueAsNumber * totalDuration;
 });
+
+progressText.innerText = "0%";
+
+function updateProgress() {
+    const currentProgress = animation.effect?.getComputedTiming().progress;
+
+    if (currentProgress) {
+        const currentProgressText = (currentProgress * 100).toFixed() + "%";
+        progressText.innerText = currentProgressText;
+    }
+
+    requestAnimationFrame(updateProgress);
+}
+
+updateProgress();

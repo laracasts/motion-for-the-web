@@ -1,22 +1,17 @@
 const square = document.querySelector(".square") as HTMLDivElement;
 
-let rotation = 0;
-const MAX_ROTATION = 360;
+const keyframes = [
+    { transform: "translateX(0) translateY(0)", easing: "ease-in-out" },
+    { transform: "translateX(100px)" },
+    { transform: "translateX(100px) translateY(100px)", easing: "steps(3)" },
+    { transform: "translateX(0) translateY(100px)" },
+    { transform: "translateX(0) translateY(0)" },
+];
 
-function rotateSquare() {
-    rotation++;
-    square.style.transform = `rotate(${rotation}deg)`;
+const options: KeyframeAnimationOptions = {
+    duration: 5000,
+    iterations: Infinity,
+    easing: "ease-in-out",
+};
 
-    if (rotation < MAX_ROTATION) {
-        requestAnimationFrame(rotateSquare);
-    }
-}
-
-rotateSquare();
-
-// const intervalId = setInterval(() => {
-//     rotation++;
-//     square.style.transform = `rotate(${rotation}deg)`;
-
-//     if (rotation >= MAX_ROTATION) clearInterval(intervalId);
-// }, 1000 / 10); // 16.66666
+square.animate(keyframes, options);

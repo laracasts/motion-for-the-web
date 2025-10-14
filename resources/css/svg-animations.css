@@ -1,0 +1,13 @@
+svg {
+    overflow: visible;
+}
+
+.trendline polyline {
+    stroke-dasharray: 367;
+    stroke-dashoffset: 367;
+    transition: stroke-dashoffset 2s ease-in-out;
+}
+
+.trendline:hover polyline {
+    stroke-dashoffset: 0;
+}

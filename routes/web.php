@@ -27,3 +27,5 @@ Route::get('/view-transitions/{post}', function (Post $post) {
 });
 
 Route::view('js-animations', 'js-animations');
+
+Route::view('svg-animations', 'svg-animations');

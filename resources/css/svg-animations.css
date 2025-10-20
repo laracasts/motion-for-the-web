@@ -2,7 +2,7 @@ svg {
     overflow: visible;
 }
 
-.trendline polyline {
+/* .trendline polyline {
     stroke-dasharray: 367;
     stroke-dashoffset: 367;
     transition: stroke-dashoffset 2s ease-in-out;
@@ -10,4 +10,27 @@ svg {
 
 .trendline:hover polyline {
     stroke-dashoffset: 0;
+} */
+.spinner circle {
+    stroke-linecap: round;
+    animation: load 1.5s infinite;
+    transform-origin: center;
+}
+
+@keyframes load {
+    0% {
+        stroke-dasharray: 10 10 50 107;
+        transition-timing-function: ease-out;
+    }
+    50% {
+        transform: rotate(180deg);
+        stroke-dasharray: 107 50 10 10;
+        stroke-dashoffset: 78;
+        transition-timing-function: linear;
+    }
+    100% {
+        transform: rotate(360deg);
+        stroke-dasharray: 10 10 50 107;
+        transition-timing-function: ease-in;
+    }
 }

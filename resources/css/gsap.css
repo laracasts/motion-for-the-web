@@ -1,0 +1,15 @@
+.square {
+    height: 50px;
+    width: 50px;
+    background-color: oklch(0.69 0.18 245.62);
+    border-radius: 0.25rem;
+}
+
+.content {
+    padding: 800px 0;
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}

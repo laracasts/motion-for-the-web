@@ -31,3 +31,4 @@ Route::view('svg-animations', 'svg-animations');
 Route::view('js-animations', 'js-animations');
 Route::view('motion', 'motion');
 Route::view('anime', 'anime');
+Route::view('gsap', 'gsap');

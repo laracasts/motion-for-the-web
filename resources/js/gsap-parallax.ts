@@ -4,4 +4,6 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-ScrollSmoother.create({ effects: true });
+ScrollSmoother.create({
+    effects: true,
+});
